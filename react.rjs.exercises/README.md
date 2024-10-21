@@ -18,7 +18,7 @@ Chaque tâche possède les propriétés suivantes
   - Ajoutez une icône pour pouvoir déplacer la tâche vers le bas (composant GoMoveToBottom de react-icons/go).
 
 ## Etape 2
-- Mettez en place les PropTypes et les DefaultTypes pour les composants.
+- Mettez en place les PropTypes et les props par défaut pour les composants.
 - Ajoutez un tooltip qui affiche des informations complémentaires pour la tâche. Lorsque la souris est positionnée au-dessus de la barre de progression. Les informations à afficher sont le temps total et le temps restant.
 - Ajoutez des tests unitaires pour cette application.  
 Vous pouvez ajouter des tests pour les composants suivants
