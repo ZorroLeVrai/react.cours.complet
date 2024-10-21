@@ -1,0 +1,50 @@
+.center {
+  text-align: center;
+}
+
+.border-light {
+  border: 1px solid black;
+}
+
+.padding-medium {
+  padding: 1rem;
+}
+
+.margin-small {
+  margin: 0.25rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  /* If you want dots under the hoverable text */
+}
+
+.tooltip .tooltiptext {
+  width: 120px;
+  background-color: blue;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: green;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  border: 0px solid black;
+  padding: 0.5rem 0;
+}
