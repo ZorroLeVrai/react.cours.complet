@@ -30,6 +30,7 @@ export const RouterLayout = () => {
         <LinkElement to="/customHooks/useArray" text="useArray" />
         <LinkElement to="/customHooks/useToggle" text="useToggle" />
         <LinkElement to="/customHooks/useFetch" text="useFetch" />
+        <LinkElement to="/customHooks/useLocalStorage" text="useLocalStorage" />
       </div>
       <div>
         <span>

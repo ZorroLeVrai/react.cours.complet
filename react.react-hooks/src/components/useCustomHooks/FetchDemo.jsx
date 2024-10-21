@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import useFetch from './useFetch'; // Import the custom hook
 
 
-const UseFetchDemo = () => {
+const FetchDemo = () => {
     const { fetchData, data, error, loading } = useFetch('https://jsonplaceholder.typicode.com/posts');
 
     // Optionally, you can trigger fetching in `useEffect`, or on a button click, etc.
@@ -27,4 +27,4 @@ const UseFetchDemo = () => {
   
 }
 
-export default UseFetchDemo;
+export default FetchDemo;
