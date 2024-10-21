@@ -7,8 +7,8 @@ const UseFetchDemo = () => {
 
     // Optionally, you can trigger fetching in `useEffect`, or on a button click, etc.
     useEffect(() => {
+      // Automatically trigger the request on mount
         fetchData();
-       // Automatically trigger the request on mount
     }, [fetchData]);
   
   

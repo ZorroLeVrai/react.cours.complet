@@ -33,7 +33,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/useState" element={<UseStateDemo />} />
             <Route path="/useEffect" element={<UseEffectDemos />} />
-            <Route path="/useRef" element={<UseRefDomElement />} />
+            <Route path="/useRef" element={<UseRefDemo />} />
             <Route path="/useReducer" element={<UseReducerDemo />} />
             <Route path="/useContext" element={<UseContextDemo />} />
             <Route path="/useMemo" element={<UseMemoDemo />} />

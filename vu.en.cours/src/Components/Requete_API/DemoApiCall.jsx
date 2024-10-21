@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 
-export default function ApiCall() {
+export default function DemoApiCall() {
   const [commentId, setCommentId] = useState(1);
   const [comment, setComment] = useState(null);
 
@@ -24,7 +24,7 @@ export default function ApiCall() {
   const { id, name } = comment ?? {};
 
   return (
-    <>
+    <div>
       {comment && <div className="m-2">
         <div>Id: {id}</div>
         <div>Name: {name}</div>
@@ -33,6 +33,6 @@ export default function ApiCall() {
         <button className={previousButtonStyle} onClick={handlePreviousComment}>Précédent</button>
         <button className="m-1 btn btn-primary" onClick={handleNextComment}>Suivant</button>
       </div>
-    </>
+    </div>
   );
 }
