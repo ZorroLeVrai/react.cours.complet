@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import ChildComponent from "./ChildComponent";
 
-const App = () => {
+const DemoForwardRef = () => {
   const inputRef = useRef(null);
   
   function handleClick() {
@@ -17,4 +17,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default DemoForwardRef;

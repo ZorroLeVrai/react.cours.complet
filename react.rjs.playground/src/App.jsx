@@ -7,6 +7,7 @@ import DemoCustomHook from "./DemoCustomHook";
 import './App.css'
 import DemoPortal from "./Portal/DemoPortal";
 import DemoRenderProp from "./RenderProps/DemoRenderProp";
+import DemoForwardRef from "./forwardRef/DemoForwardRef";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/hoc" element={<DemoHoc/>} />
             <Route path="/render_props" element={<DemoRenderProp/>} />
             <Route path="/custom_hook" element={<DemoCustomHook/>} />
+            <Route path="/forward_ref" element={<DemoForwardRef />} />
           </Route>
         </Routes>
       </BrowserRouter>
