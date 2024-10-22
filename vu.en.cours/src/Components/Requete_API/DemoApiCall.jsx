@@ -1,16 +1,17 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 
 export default function DemoApiCall() {
   const [commentId, setCommentId] = useState(1);
   const [comment, setComment] = useState(null);
 
-  const fetchData = useCallback(async () => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/comments/${commentId}`);
-    const commentItem = await response.json();
-    setComment(commentItem);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`https://jsonplaceholder.typicode.com/comments/${commentId}`);
+      const commentItem = await response.json();
+      setComment(commentItem);
+    };
+    fetchData();
   }, [commentId]);
-
-  useEffect(() => {fetchData()}, [fetchData]);
 
   const handlePreviousComment = () => setCommentId(id => id-1);
   const handleNextComment = () => setCommentId(id => id+1);
