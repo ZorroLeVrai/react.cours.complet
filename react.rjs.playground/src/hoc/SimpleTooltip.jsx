@@ -1,7 +1,6 @@
-import React from 'react'
-import PortalModal from './PortalModal';
+import PortalModal from '../Portal/PortalModal';
 
-const Tooltip = ({text}) => {
+const SimpleTooltip = ({text}) => {
   return (
     <>
       <div className="tooltip">
@@ -12,4 +11,4 @@ const Tooltip = ({text}) => {
   )
 }
 
-export default Tooltip;
+export default SimpleTooltip;

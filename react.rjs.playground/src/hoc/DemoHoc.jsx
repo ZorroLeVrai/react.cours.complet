@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import withToolTip from './withToolTip';
-import Tooltip from '../Tooltip';
+import SimpleTooltip from './SimpleTooltip';
 
 const DemoHoc = ({age = 18}) => {
   return (
@@ -12,4 +12,4 @@ DemoHoc.propTypes = {
   age: PropTypes.number
 };
 
-export default withToolTip(DemoHoc, () => <Tooltip text="Affiche votre age"/>);
+export default withToolTip(DemoHoc, () => <SimpleTooltip text="Affiche votre age"/>);

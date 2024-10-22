@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import PortalModal from '../PortalModal';
+import PortalModal from '../Portal/PortalModal';
 
 /* Higher Order Component to add a tooltip to a React component*/
 /* renderTooltip uses a render prop to render its component */

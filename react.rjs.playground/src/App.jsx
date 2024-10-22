@@ -3,9 +3,10 @@ import { BrowserRouter } from 'react-router-dom';
 import DemoHoc from './hoc/DemoHoc';
 import RouterLayout from './RouterLayout';
 import Home from "./Home";
-import Advanced from "./Advanced";
-import { FormExample } from "./FormExample";
+import DemoCustomHook from "./DemoCustomHook";
 import './App.css'
+import DemoPortal from "./Portal/DemoPortal";
+import DemoRenderProp from "./RenderProps/DemoRenderProp";
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
         <Routes>
           <Route element={<RouterLayout/>}>
             <Route path="/" element={<Home />} />
-            <Route path="/advanced" element={<Advanced/>} />
+            <Route path="/portal" element={<DemoPortal/>} />
             <Route path="/hoc" element={<DemoHoc/>} />
-            <Route path="/form" element={<FormExample/>} />
+            <Route path="/render_props" element={<DemoRenderProp/>} />
+            <Route path="/custom_hook" element={<DemoCustomHook/>} />
           </Route>
         </Routes>
       </BrowserRouter>
