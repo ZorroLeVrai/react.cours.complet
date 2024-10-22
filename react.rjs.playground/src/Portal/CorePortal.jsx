@@ -1,6 +1,5 @@
 import withToolTip from '../hoc/withToolTip';
 import PortalModal from './PortalModal';
-import PortalToolTip from './PortalToolTip';
 
 const CorePortal = () => {
   return (
