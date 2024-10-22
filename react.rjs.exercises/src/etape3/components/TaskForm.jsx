@@ -43,7 +43,7 @@ const TaskForm = ({formTitle, taskData, handleFormSubmit}) => {
 
   const { register, formState, handleSubmit, reset, getValues, setValue }
     = useForm({resolver: zodResolver(schema), mode: "onChange", defaultValues: taskFormValue});
-  const {errors, isValid, isSubmitSuccessful} = formState;
+  const { errors, isValid } = formState;
 
   const { gridFormContainer, gridDoubleItem } = styles;
   const warningStyle = composeStyles("center-text", "warning-text", gridDoubleItem);
@@ -86,7 +86,6 @@ const TaskForm = ({formTitle, taskData, handleFormSubmit}) => {
     }
 
     if (newTimeToComplete) {
-      setValue("taskStatus", taskStatusValue);
       setValue(timeToCompleteField, newTimeToComplete, { shouldValidate: true });
     }
   };
