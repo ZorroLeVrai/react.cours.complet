@@ -1,4 +1,5 @@
 import withToolTip from '../hoc/withToolTip';
+import PortalModal from './PortalModal';
 import PortalToolTip from './PortalToolTip';
 
 const CorePortal = () => {
@@ -7,4 +8,4 @@ const CorePortal = () => {
   )
 };
 
-export default withToolTip(CorePortal, () => <PortalToolTip text="La souris sur l'élément"/>);
+export default withToolTip(CorePortal, () => <PortalModal>La souris sur l'élément</PortalModal>);
