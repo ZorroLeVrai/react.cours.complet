@@ -8,7 +8,7 @@ import { getTimeValue } from '../../timeConverter';
 import styles from "./Task.module.css";
 import PropTypes from 'prop-types';
 
-const Task = ({totalTime, timeToComplete, status, taskName, isFirst, isLast}) => {
+const Task = ({totalTime, timeToComplete, status, taskName, isFirst = false, isLast = false}) => {
   const totalTimeInSeconds = getTimeValue(totalTime);
   const timeToCompleteInSeconds = getTimeValue(timeToComplete);
   const progressTimeInSeconds = totalTimeInSeconds - timeToCompleteInSeconds;
@@ -44,11 +44,6 @@ Task.propTypes = {
   taskName: PropTypes.string.isRequired,
   isFirst: PropTypes.bool,
   isLast: PropTypes.bool
-};
-
-Task.defaultProp = {
-  isFirst: false,
-  isLast: false
 };
 
 export default Task;

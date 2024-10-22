@@ -13,9 +13,11 @@ describe('ProgressStatusWithTooltip', () => {
       taskName="First Task"
       totalTime="2d"
       timeToComplete="1d"/>);
-    expect(screen.queryByTestId("progressbar_tooltip")).not.toBeInTheDocument();
+    
+    const progressBarTooltip = screen.queryByTestId("progressbar_tooltip");
+    expect(progressBarTooltip).not.toBeInTheDocument();
     await userEvent.hover(screen.getByRole("progressbar"));
-    expect(screen.queryByTestId("progressbar_tooltip")).toBeInTheDocument();
+    expect(progressBarTooltip).toBeInTheDocument();
   });
 
   it('should not show a tooltip when you are not hovering on the progress bar', async () => {
@@ -26,10 +28,12 @@ describe('ProgressStatusWithTooltip', () => {
       taskName="First Task"
       totalTime="2d"
       timeToComplete="1d"/>);
-    expect(screen.queryByTestId("progressbar_tooltip")).not.toBeInTheDocument();
+
+    const progressBarTooltip = screen.queryByTestId("progressbar_tooltip");
+    expect(progressBarTooltip).not.toBeInTheDocument();
     await userEvent.hover(screen.getByRole("progressbar"));
-    expect(screen.queryByTestId("progressbar_tooltip")).toBeInTheDocument();
+    expect(progressBarTooltip).toBeInTheDocument();
     await userEvent.unhover(screen.getByRole("progressbar"));
-    expect(screen.queryByTestId("progressbar_tooltip")).not.toBeInTheDocument();
+    expect(progressBarTooltip).not.toBeInTheDocument();
   });
 });
