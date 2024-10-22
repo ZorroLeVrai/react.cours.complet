@@ -3,11 +3,12 @@ import { useState, useEffect } from 'react';
 // Custom hook pour récupérer les données d'une API
 const useFetchData = (url) => {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    //utilsation d'une fonction locale car useEffect doit retourner un CLeanup code pas une promesse
+    //utilsation d'une fonction locale car useEffect doit retourner un Cleanup code pas une promesse
     const fetchData = async() => {
+      setLoading(true);
       try {
         const response = await fetch(url);
         const result = await response.json();
