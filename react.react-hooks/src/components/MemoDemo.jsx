@@ -22,14 +22,14 @@ export default function MemoDemo() {
   const cbFunc = useCallback(maFonction, []);
 
   const x = 12;
-  //const obj = {x};
+  //const obj = {x: x};
   const obj = useMemo(()=>({ x }), [x]);
 
   return (
     <div className={styles.border}>
       <button onClick={() => setFakeState(current => !current)}>{fakeState ? "true":"false"}</button>
-      <Child componentName={"Child"} value={42} callback={maFonction} />
-      <ChildMemo componentName={"ChildMemo"} value={42} callback={maFonction} />
+      <Child componentName="Child" value={42} test={obj} test2={cbFunc} />
+      <ChildMemo componentName="ChildMemo" value={42} test={obj} test2={cbFunc} />
     </div>
   );
 }

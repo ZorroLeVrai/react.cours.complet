@@ -8,6 +8,7 @@ const persistConfig = {
   storage,
 }
 
+//l'utilisation de combineReducers() n'est pas nécessaire si vous avez qu'une seule slice
 const rootReducer = combineReducers({
   task: taskReducer
 });

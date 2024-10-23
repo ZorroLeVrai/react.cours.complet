@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 const selectorFunction = state => {
   //console.log("state.first.a1");
   return state.second.b1;
+  //return state.second.b1.filter(e => e % 2 == 1);
 }
 
 const selectB1Value = createSelector(

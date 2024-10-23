@@ -3,9 +3,9 @@ import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
 const selectorFunction = state => {
-  //console.log("state.first.a1");
-  //return state.first.a1;
-  return state.first.a1.filter(e => e % 2 == 1);
+  console.log("state.first.a1")
+  return state.first.a1;
+  //return state.first.a1.filter(e => e % 2 == 1);
 }
 
 const selectA1Value = createSelector(
@@ -17,7 +17,7 @@ const selectA1Value = createSelector(
 );
 
 const DisplayFirstData = () => {
-  const a1Value = useSelector(selectorFunction);
+  const a1Value = useSelector(selectA1Value);
 
   const refreshCounter = useRef(1);
   useEffect(() => { refreshCounter.current += 1; });
