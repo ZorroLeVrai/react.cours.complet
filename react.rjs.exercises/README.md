@@ -46,7 +46,7 @@ Vous pouvez ajouter des tests pour les composants suivants
 - Optimisez les performances de l'application (optimisez le composant Task).
 
 ## Etape 6
-- Créez une animation lors de l'affichage de la liste des tâches.
+- Créez une animation lors de l'affichage des formulaires des tâches. Lors de l'affichage du formulaire, celui-ci apparait progressivement.
 
 ## Etape 7
 - Mettez en place l'internationalisation en gérant 2 langues dans l'application.  
