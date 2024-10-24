@@ -3,22 +3,21 @@ import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
 const selectorFunction = state => {
-  //console.log("state.first.a1");
+  //console.log("state.second.b1");
   return state.second.b1;
   //return state.second.b1.filter(e => e % 2 == 1);
 }
 
-const selectB1Value = createSelector(
+const selectB1Selector = createSelector(
   [selectorFunction],
   val => {
-    console.log("First Selection Function (a1)");
-    //return val;
+    console.log("Second Selection Function (b1)");
     return val.filter(e => e % 2 == 1);
   }
 );
 
 const DisplaySecondData = () => {
-  const b1Value = useSelector(selectB1Value);
+  const b1Value = useSelector(selectB1Selector);
 
   const refreshCounter = useRef(1);
   useEffect(() => { refreshCounter.current += 1; });
