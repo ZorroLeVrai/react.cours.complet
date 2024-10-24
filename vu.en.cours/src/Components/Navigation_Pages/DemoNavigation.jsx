@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import MainPage from './MainPage';
 
-const NavigationDemo = () => {
+const DemoNavigation = () => {
   return (
     <BrowserRouter>
       <MainPage />
@@ -9,4 +9,4 @@ const NavigationDemo = () => {
   )
 }
 
-export default NavigationDemo;
+export default DemoNavigation;
