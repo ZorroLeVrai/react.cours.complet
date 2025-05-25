@@ -8,6 +8,7 @@ const selectorFunction = state => {
   //return state.first.a1.filter(e => e % 2 == 1);
 }
 
+// creates a memoized selector using createSelector
 const selectA1Selector = createSelector(
   [selectorFunction],
   val => {
