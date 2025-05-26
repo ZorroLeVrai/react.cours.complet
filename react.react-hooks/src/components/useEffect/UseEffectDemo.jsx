@@ -11,6 +11,7 @@ const UseEffectDemo = () => {
   };
 
   useEffect(()=>{
+    // exécuté uniquement au premier rendu du composant
     setCounter(Number(localStorage.getItem(localStorageItemName)));
   }, []);
 
