@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, incrementByAmount } from "./counterSlice";
 
 export default function Counter() {
+  const refIncrementByAmount = React.useRef(null);
+
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
 
@@ -18,6 +20,17 @@ export default function Counter() {
       <button aria-label="Decrement value" onClick={handleDecrement}>
         Decrement
       </button>
+      <div>
+        <label htmlFor="incrementByAmount" >Increment by amount:</label>
+        <input
+          id="incrementByAmount"
+          type="number"
+          ref={refIncrementByAmount}
+          />
+        <button onClick={() => dispatch(incrementByAmount(refIncrementByAmount.current.valueAsNumber))}>
+          Increment by Amount
+        </button>
+      </div>
     </div>
   );
 }
