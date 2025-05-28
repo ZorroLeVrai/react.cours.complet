@@ -3,6 +3,12 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import taskGroupReducer from './slices/taskGroupSlice';
 import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
 
+// export const store = configureStore({
+//   reducer: {
+//     taskGroup: taskGroupReducer,
+//   }
+// });
+
 const persistConfig = {
   key: 'task-manager-app',
   storage,
